@@ -8,9 +8,33 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet',href: 'https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,500;0,600;0,700;1,400&display=swap' },
+      { rel: 'stylesheet',href: 'https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap' },
+      { rel: 'stylesheet',href: 'http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' },
+      {
+        rel: "stylesheet",
+        href: "/assets/libs/bootstrap4/bootstrap-tcl.css"
+      }
+      
+
+    ],
+    script:[
+    {
+      async:true,
+      defer:true,
+      crossorigin:"anonymous",
+      src:'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v7.0&appId=682829465411569&autoLogAppEvents=1',
+      nonce:"NIt03fWF"
+    }
+  ],
   },
+  /*
+<script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v7.0&appId=682829465411569&autoLogAppEvents=1"
+    nonce="njMQVAzi"></script>
+*/
+  
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
@@ -18,6 +42,7 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
+    '~/plugins/axios'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -31,9 +56,13 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
+    '@nuxtjs/axios'
   ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+  },
+   env: {
+    baseUrl: process.env.BASE_URL || 'http://libraryblog.abc/wp-api/wp-json/wp/v2'
   }
 }

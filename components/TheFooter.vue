@@ -43,13 +43,12 @@
                 <p>Fanpage</p>
               </div>
               <div class="footer-facebook">
-                <div class="fb-page" data-href="https://www.facebook.com/HocLapTrinhWebTrenProjectsThucTe/" data-tabs=""
+                <div class="fb-page" data-href="https://www.facebook.com/mixigamingfanup/" data-tabs=""
                   data-width="" data-height="" data-small-header="false" data-adapt-container-width="true"
                   data-hide-cover="false" data-show-facepile="true">
-                  <blockquote cite="https://www.facebook.com/HocLapTrinhWebTrenProjectsThucTe/"
+                  <blockquote cite="https://www.facebook.com/luan.tran.9277"
                     class="fb-xfbml-parse-ignore">
-                    <a href="https://www.facebook.com/HocLapTrinhWebTrenProjectsThucTe/">Học Lập Trình Web Thông Qua
-                      Projects Thực Tế</a>
+                    <a href="https://www.facebook.com/HocLapTrinhWebTrenProjectsThucTe/">Nuxt Blog </a>
                   </blockquote>
                 </div>
               </div>

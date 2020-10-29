@@ -1,7 +1,10 @@
 <template>
  <main>
+   
     <NewsLatest />
     <NewsPopular />
+    <NewsArticleList />
+    
  </main>
 </template>
 

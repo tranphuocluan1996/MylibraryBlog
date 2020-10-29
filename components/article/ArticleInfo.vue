@@ -1,12 +1,12 @@
 <template>
    <div class="article-item__info">
-        <div class="article-item__author-image">
+        <div v-if="isShowAvatar" class="article-item__author-image">
         <a aria-label="John Doe" href="#">
             <img src="../../static/assets/images/john-doe.png" alt="john-doe">
         </a>
         </div>
         <div class="article-item__info-right">
-        <div class="article-item__author-name">
+        <div v-if="isShowAdmin" class="article-item__author-name">
             <a href="#"><strong>John Doe</strong></a>
         </div>
         <div class="article-item__datetime">
@@ -26,7 +26,16 @@
 
 <script>
 export default {
-
+    props: {
+        isShowAvatar: {
+            type: Boolean,
+            default: true
+        },
+        isShowAdmin:{
+            type:Boolean,
+            default:true
+        }
+    },
 }
 </script>
 

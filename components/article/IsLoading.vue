@@ -1,14 +1,14 @@
 <template>
    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; display: block; shape-rendering: auto;" width="38px" height="38px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
-<rect x="17.5" y="30" width="15" height="40" fill="#194c8e">
+<rect x="17.5" y="30" width="15" height="40" fill="#408ee0">
   <animate attributeName="y" repeatCount="indefinite" dur="1.0989010989010988s" calcMode="spline" keyTimes="0;0.5;1" values="18;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.21978021978021978s"></animate>
   <animate attributeName="height" repeatCount="indefinite" dur="1.0989010989010988s" calcMode="spline" keyTimes="0;0.5;1" values="64;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.21978021978021978s"></animate>
 </rect>
-<rect x="42.5" y="30" width="15" height="40" fill="#669579">
+<rect x="42.5" y="30" width="15" height="40" fill="#1b75be">
   <animate attributeName="y" repeatCount="indefinite" dur="1.0989010989010988s" calcMode="spline" keyTimes="0;0.5;1" values="20.999999999999996;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.10989010989010989s"></animate>
   <animate attributeName="height" repeatCount="indefinite" dur="1.0989010989010988s" calcMode="spline" keyTimes="0;0.5;1" values="58.00000000000001;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.10989010989010989s"></animate>
 </rect>
-<rect x="67.5" y="30" width="15" height="40" fill="#94cea9">
+<rect x="67.5" y="30" width="15" height="40" fill="#89bff8">
   <animate attributeName="y" repeatCount="indefinite" dur="1.0989010989010988s" calcMode="spline" keyTimes="0;0.5;1" values="20.999999999999996;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1"></animate>
   <animate attributeName="height" repeatCount="indefinite" dur="1.0989010989010988s" calcMode="spline" keyTimes="0;0.5;1" values="58.00000000000001;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1"></animate>
 </rect>
@@ -28,5 +28,4 @@ export default {
 </script>
 
 <style>
-
 </style>

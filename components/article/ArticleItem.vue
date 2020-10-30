@@ -1,12 +1,16 @@
 <template>
-  <article class="article-item" v-bind:class='className'>
+  <article class="article-item" v-bind:class='className' v-if="posts">
               <ArticleThumb />
               <div class="article-item__content">
                 <ArticleListCategory v-if="isStyleCard && isShowCategory"/>
                 <ArticleView v-if="isShowCategory"/>
-                <ArticleTitle />
+                <ArticleTitle 
+                v-bind:title="posts.title.rendered"
+                v-bind:slug="posts.slug"
+                />
                 <ArticleDesc v-if="isShowDesc"/>
                <ArticleInfo 
+               v-bind:day="posts.date"
                v-bind:isShowAvatar='isShowAvatar'
                v-bind:isShowAdmin='isShowAdmin'
                />
@@ -52,7 +56,11 @@ export default {
     isShowAdmin:{
       type:Boolean,
       default:true
-    }
+    },
+    posts: {
+      type: Object,
+      default: null
+    },
   },
 
   computed: {

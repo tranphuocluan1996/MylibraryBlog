@@ -4,9 +4,12 @@
           <MainTitle title="Bài viết mới nhất"/>
           <div class="latest-news__list spacing">
 
-            <NewsLatestCart />
-            <NewsLatestCart />
-            <NewsLatestCart />
+            <NewsLatestCart 
+            v-for="item in latestList" 
+            v-bind:key='item.id'
+            v-bind:posts="item"
+            />
+            
 
       </div>
 </div>
@@ -15,8 +18,15 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
-
+    computed: {
+        ...mapState({
+            latestList: function(state){
+                return state.posts.latestList
+            }
+        })
+    },
 }
 </script>
 

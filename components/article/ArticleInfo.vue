@@ -1,13 +1,13 @@
 <template>
    <div class="article-item__info">
         <div v-if="isShowAvatar" class="article-item__author-image">
-        <a aria-label="John Doe" href="#">
-            <img src="../../static/assets/images/john-doe.png" alt="john-doe">
-        </a>
+        <nuxt-link aria-label="John Doe" v-bind:to="customUser">
+            <img v-bind:src="customAvatarAuthor" v-bind:alt="author_name">
+        </nuxt-link>
         </div>
         <div class="article-item__info-right">
         <div v-if="isShowAdmin" class="article-item__author-name">
-            <a href="#"><strong>John Doe</strong></a>
+            <nuxt-link v-bind:to="customUser"><strong>{{author_name}}</strong></nuxt-link>
         </div>
         <div class="article-item__datetime">
             <div class="date">{{dateTime.format}}</div>
@@ -44,6 +44,14 @@ export default {
         day:{
             type:String,
             default: ''
+        },
+        author_avatar:{
+            type:String,
+            default: ''
+        },
+        author_name:{
+            type:String,
+            default: ''
         }
     },
     computed: {
@@ -54,6 +62,16 @@ export default {
                     format:dayFormat.format('DD/MM/YYYY'),
                     relative:dayFormat.fromNow()
                 }
+            },
+            customAvatarAuthor(){
+                if(this.author_avatar){
+                    return this.author_avatar
+                }else {
+                    return '../../static/assets/images/john-doe.png'
+                }
+            },
+            customUser(){
+                return '/user/'+ this.author_name
             }
     },
 }

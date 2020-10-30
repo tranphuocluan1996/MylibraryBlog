@@ -1,6 +1,9 @@
 <template>
   <article class="article-item" v-bind:class='className' v-if="posts">
-              <ArticleThumb />
+              <ArticleThumb
+              v-bind:slug="posts.slug"
+              v-bind:thumb_nail_url="posts.thumbnail_url"
+              />
               <div class="article-item__content">
                 <ArticleListCategory v-if="isStyleCard && isShowCategory"/>
                 <ArticleView v-if="isShowCategory"/>
@@ -10,6 +13,8 @@
                 />
                 <ArticleDesc v-if="isShowDesc"/>
                <ArticleInfo 
+               v-bind:author_name="posts.author_name"
+               v-bind:author_avatar="posts.author_avatar"
                v-bind:day="posts.date"
                v-bind:isShowAvatar='isShowAvatar'
                v-bind:isShowAdmin='isShowAdmin'
